@@ -1,0 +1,36 @@
+@import './../../../../styles/modules/variables.less';
+
+
+.singlePark {
+    float: left;
+    margin: 5px;
+    height: 95px;
+    width: 45%;
+    color: white;
+    background-color: blue;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+
+    &:hover {
+        opacity: 0.3;
+        cursor: pointer;
+    }
+    
+    p {
+        line-height: 1;
+        margin-top: 9px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media only screen and (max-width: @sm-to) {
+    .singlePark {
+        width: 100%;
+
+
+    }
+}

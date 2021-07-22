@@ -1,0 +1,157 @@
+@import './../../../styles/modules/variables.less';
+
+
+/* Accordion animation */
+
+@keyframes bigParkOpen {
+    from {
+        height: 100px;
+    }
+
+    to {
+        height: 520px;
+    }
+}
+
+@keyframes bigParkClose {
+    from {
+        height: 520px;
+    }
+
+    to {
+        height: 100px;
+    }
+}
+
+.bigParkClosing {
+    animation: bigParkClose 0.5s 1 !important;
+}
+
+.bigParkClosing>.parkContainer {
+    display: none;
+}
+
+.bigParkClosing>.separationLine {
+    display: none;
+}
+
+
+
+/* Expanded accordion styles */
+
+.bigParkContainer {
+    padding           : 10px;
+    width             : 96%;
+    margin-top        : 20px;
+    margin-left       : 2%;
+    margin-right      : 2%;
+    background-color  : @container-color;
+    display           : block;
+    overflow          : hidden;
+    position          : relative;
+    -webkit-box-shadow: 0 2px 3px rgba(57, 63, 72, 0.2);
+    -moz-box-shadow   : 0 2px 3px rgba(57, 63, 72, 0.2);
+    box-shadow        : 0 2px 3px rgba(57, 63, 72, 0.2);
+    animation         : bigParkOpen 0.5s 1;
+
+
+    .parkTitle {
+        margin-bottom: 15px;
+    }
+
+    .parkContainer {
+        width        : 100%;
+        height       : 400px;
+        margin-bottom: 10px;
+
+        .parkImage {
+            margin-bottom: 15px;
+        }
+
+        .featuresTitle {
+            float      : left;
+            width      : 70%;
+            margin-left: 40px;
+        }
+    }
+
+    .separationLine {
+        border       : 0.5px solid #d1d1d1;
+        margin-bottom: 10px;
+        width        : 100%;
+    }
+
+    .hideDetails {
+        text-align: end;
+
+        a {
+            text-decoration: none;
+            margin-right   : 10px;
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: @lg-from) {
+    .firstColumn {
+        float: left;
+        width: 33.333%;
+    }
+
+    .secondColumn {
+        float: left;
+        width: 33.333%;
+    }
+
+    .thirdColumn {
+        float: left;
+        width: 33.333%;
+    }
+}
+
+@media only screen and (min-width: @md-from) and (max-width: @md-to) {
+    .firstColumn {
+        float: left;
+        width: 50%;
+
+        .parkImage {
+            display     : block;
+            margin-left : auto;
+            margin-right: auto;
+        }
+    }
+
+    .secondColumn {
+        float: left;
+        width: 50%;
+    }
+
+    .thirdColumn {
+        float: left;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: @sm-to) {
+    .firstColumn {
+        float: left;
+        width: 100%;
+
+        .parkImage {
+            display     : block;
+            margin-left : auto;
+            margin-right: auto;
+        }
+    }
+
+    .secondColumn {
+        float: left;
+        width: 100%;
+    }
+
+    .thirdColumn {
+        float: left;
+        width: 90%;
+    }
+}

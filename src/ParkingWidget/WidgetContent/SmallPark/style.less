@@ -1,0 +1,30 @@
+@import './../../../styles/modules/variables.less';
+
+
+.smallParkContainer {
+    width       : 96%;
+    height      : 100px;
+    margin-top  : 20px;
+    margin-left : 2%;
+    margin-right: 2%;
+
+    position: relative;
+
+    background-color  : @container-color;
+    -webkit-box-shadow: 0 2px 3px rgba(57, 63, 72, 0.2);
+    -moz-box-shadow   : 0 2px 3px rgba(57, 63, 72, 0.2);
+    box-shadow        : 0 2px 3px rgba(57, 63, 72, 0.2);
+
+    .parkTitle {
+        padding: 10px;
+    }
+
+    .showDetails {
+        bottom         : 0;
+        position       : absolute;
+        right          : 0;
+        bottom         : 0;
+        margin         : 10px;
+        text-decoration: none;
+    }
+}
