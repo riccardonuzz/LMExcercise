@@ -37,7 +37,7 @@ class SmallPark extends Component {
         this.smallParkNode.appendChild(title);
         
         const showDetailsButton = this.create('a', 'showDetails');
-        showDetailsButton.href = '/#';
+        showDetailsButton.href = '#';
         showDetailsButton.innerHTML = 'Mostra dettagli';
         showDetailsButton.onclick = this._toggleDetails;
         this.smallParkNode.appendChild(showDetailsButton);

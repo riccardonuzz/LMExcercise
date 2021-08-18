@@ -76,7 +76,7 @@ class BigPark extends Component {
 
         const showDetailsContainer = this.create('div', 'hideDetails');
             const showDetailsButton = this.create('a');
-                showDetailsButton.href = '/#';
+                showDetailsButton.href = '#';
                 showDetailsButton.textContent = 'Nascondi dettagli';
                 showDetailsButton.onclick = this._toggleDetails;
                 showDetailsContainer.appendChild(showDetailsButton);

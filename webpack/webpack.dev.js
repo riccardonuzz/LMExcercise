@@ -6,14 +6,14 @@ const {
   prod_Path,
   src_Path
 } = require('./path');
+
 const {
   selectedPreprocessor
 } = require('./loader');
 
 module.exports = {
-  entry: {
-    main: './' + src_Path + '/index.js'
-  },
+  mode: 'development',
+  entry: ['./' + src_Path + '/index.js'],
   output: {
     path: path.resolve(__dirname, prod_Path),
     filename: '[name].[chunkhash].js'
@@ -53,10 +53,10 @@ module.exports = {
       test: /\.js$/,
       loader: 'babel-loader',
       exclude: /node_modules/,
-      query: {
+      options: {
         plugins: [
-          'transform-class-properties',
-          'transform-object-rest-spread'
+          '@babel/plugin-proposal-class-properties',
+          '@babel/plugin-proposal-object-rest-spread'
         ]
       }
     },

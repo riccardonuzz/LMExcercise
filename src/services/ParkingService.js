@@ -30,8 +30,8 @@ class ParkingService {
      * @description used to fetch infos
      */
     fetchData = async () => {
-        const response = await axios.get('./../../assets/model.json');
-        const fetchDataEvent = new CustomEvent('dataFetched', { detail: response.data });
+        const { default: json } = await import('./../../assets/model.json')
+        const fetchDataEvent = new CustomEvent('dataFetched', { detail: json });
         document.dispatchEvent(fetchDataEvent);
     };
 }
