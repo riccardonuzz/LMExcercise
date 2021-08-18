@@ -3,6 +3,9 @@
 Enojyed working on this parking widget in a past interview.
 
 
+![Widget screenshot](https://github.com/[riccardonuzz]/[parking-widget]/blob/[master]/assets/screenshot.png?raw=true)
+
+
 The widget can be instantiated as a normal object (eg. const Widget = new Widget()). In order to work properly, needs some data to be passed through the constructor (assets/model.json):
  - vendor;
  - dictionary;
